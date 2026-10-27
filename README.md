@@ -5,7 +5,7 @@ estatísticas por jogo da sua temporada de estreia.
 
 - **Disciplina:** Tópicos Avançados em Inteligência Artificial
 - **Link da aplicação publicada:** https://nba-rookie-5yr-79gg9bbvpax7xidzwrgjar.streamlit.app
-- **Repositório:** `COLE_AQUI_O_LINK_DO_GITHUB`
+- **Repositório:** github.com/mateusmbellini/nba-rookie-5yr
 - **Integrantes:** Mateus Muler Bellini e Matheus Pasiani da Silva
 
 ## Estrutura
@@ -32,17 +32,9 @@ python train.py --data data/nba_rookies.csv          # gera models/model.joblib 
 streamlit run app.py
 ```
 
-## Deploy (Streamlit Community Cloud)
-1. Suba a pasta para um repositório público no GitHub (inclua `models/model.joblib`).
-2. Em https://share.streamlit.io → *New app* → escolha o repositório, branch e `app.py`.
-3. Teste o link em outro navegador e cole-o neste README e no relatório.
-
 ## Uso de ferramentas de IA
-Descreva aqui como o grupo usou IA (ex.: geração inicial do código, que foi revisado, testado e adaptado) e o que mudou.
+Foi utilizado o assistente de IA Claude (Anthropic) como apoio na estruturação do projeto e na geração do código de treinamento e da aplicação. O grupo revisou, executou todo o código e verificou os resultados.
 
 ## Contribuições
-| Integrante | Tarefas |
-|---|---|
-| Nome 1 | ... |
-| Nome 2 | ... |
-| Nome 3 | ... |
+Mateus Muler Bellini - Teste do código, elaboração e organização de documentos, publicação no github.
+Matheus Pasiani da Silva - Geração e revisão do código, elaboração e formatação dos documentos.
