@@ -4,7 +4,7 @@ Aplicação de IA que estima se um calouro da NBA permanecerá **5 anos ou mais*
 estatísticas por jogo da sua temporada de estreia.
 
 - **Disciplina:** Tópicos Avançados em Inteligência Artificial
-- **Link da aplicação publicada:** `COLE_AQUI_O_LINK_DO_STREAMLIT`
+- **Link da aplicação publicada:** https://nba-rookie-5yr-79gg9bbvpax7xidzwrgjar.streamlit.app
 - **Repositório:** `COLE_AQUI_O_LINK_DO_GITHUB`
 - **Integrantes:** Mateus Muler Bellini e Matheus Pasiani da Silva
 
