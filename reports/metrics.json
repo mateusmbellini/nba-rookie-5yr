@@ -1,0 +1,110 @@
+{
+  "comparison": {
+    "Regressão Logística": {
+      "cv_f1_macro": 0.6849041277186354,
+      "test_accuracy": 0.6766917293233082,
+      "test_f1_macro": 0.6706593723006047,
+      "test_auc": 0.7491149114911491,
+      "best_params": {
+        "clf__C": 0.01,
+        "clf__class_weight": "balanced"
+      },
+      "report": {
+        "<5 anos": {
+          "precision": 0.5581395348837209,
+          "recall": 0.7128712871287128,
+          "f1-score": 0.6260869565217392,
+          "support": 101.0
+        },
+        ">=5 anos": {
+          "precision": 0.7883211678832117,
+          "recall": 0.6545454545454545,
+          "f1-score": 0.7152317880794702,
+          "support": 165.0
+        },
+        "accuracy": 0.6766917293233082,
+        "macro avg": {
+          "precision": 0.6732303513834663,
+          "recall": 0.6837083708370837,
+          "f1-score": 0.6706593723006047,
+          "support": 266.0
+        },
+        "weighted avg": {
+          "precision": 0.7009213749022021,
+          "recall": 0.6766917293233082,
+          "f1-score": 0.6813835625631889,
+          "support": 266.0
+        }
+      }
+    },
+    "Árvore de Decisão": {
+      "cv_f1_macro": 0.6672915856193055,
+      "test_accuracy": 0.6992481203007519,
+      "test_f1_macro": 0.6740196078431373,
+      "test_auc": 0.7232523252325233,
+      "best_params": {
+        "clf__max_depth": 3,
+        "clf__min_samples_leaf": 20
+      },
+      "report": {
+        "<5 anos": {
+          "precision": 0.6153846153846154,
+          "recall": 0.5544554455445545,
+          "f1-score": 0.5833333333333334,
+          "support": 101.0
+        },
+        ">=5 anos": {
+          "precision": 0.7428571428571429,
+          "recall": 0.7878787878787878,
+          "f1-score": 0.7647058823529411,
+          "support": 165.0
+        },
+        "accuracy": 0.6992481203007519,
+        "macro avg": {
+          "precision": 0.6791208791208792,
+          "recall": 0.6711671167116712,
+          "f1-score": 0.6740196078431373,
+          "support": 266.0
+        },
+        "weighted avg": {
+          "precision": 0.6944559200198299,
+          "recall": 0.6992481203007519,
+          "f1-score": 0.6958388618605337,
+          "support": 266.0
+        }
+      }
+    }
+  },
+  "final": {
+    "limiar 0,50": {
+      "accuracy": 0.6766917293233082,
+      "f1_macro": 0.6706593723006047,
+      "confusion_matrix": [
+        [
+          72,
+          29
+        ],
+        [
+          57,
+          108
+        ]
+      ]
+    },
+    "limiar ajustado 0.47": {
+      "accuracy": 0.6917293233082706,
+      "f1_macro": 0.6804383497421471,
+      "confusion_matrix": [
+        [
+          67,
+          34
+        ],
+        [
+          48,
+          117
+        ]
+      ]
+    }
+  },
+  "threshold": 0.47000000000000014,
+  "chosen": "Regressão Logística"
+}

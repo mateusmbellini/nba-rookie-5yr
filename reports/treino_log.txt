@@ -1,0 +1,119 @@
+== DADOS ==
+Formato original: (1340, 21)
+Colunas após padronização: ['name', 'gp', 'min', 'pts', 'fgm', 'fga', 'fg_pct', 'tpm', 'tpa', 'tp_pct', 'ftm', 'fta', 'ft_pct', 'oreb', 'dreb', 'reb', 'ast', 'stl', 'blk', 'tov', 'target']
+
+Valores ausentes por coluna (original):
+3p    11
+
+Linhas duplicadas (todas as colunas iguais): 12
+
+Distribuição do alvo (1 = durou >= 5 anos):
+target
+1    824
+0    504
+target
+1    62.0
+0    38.0
+
+Estatísticas descritivas:
+         count   mean    std    min    25%    50%    75%     max
+gp      1328.0  60.41  17.42  11.00  47.00  63.00  77.00   82.00
+min     1328.0  17.63   8.32   3.10  10.88  16.10  22.90   40.90
+pts     1328.0   6.80   4.36   0.70   3.70   5.55   8.80   28.20
+fgm     1328.0   2.63   1.68   0.30   1.40   2.10   3.40   10.20
+fga     1328.0   5.89   3.60   0.80   3.30   4.80   7.50   19.80
+tpm     1328.0   0.25   0.38   0.00   0.00   0.10   0.40    2.30
+tpa     1328.0   0.78   1.06   0.00   0.00   0.30   1.12    6.50
+ftm     1328.0   1.30   0.99   0.00   0.60   1.00   1.60    7.70
+fta     1328.0   1.82   1.32   0.00   0.90   1.50   2.30   10.20
+oreb    1328.0   1.01   0.78   0.00   0.40   0.80   1.40    5.30
+dreb    1328.0   2.03   1.36   0.20   1.00   1.70   2.60    9.60
+ast     1328.0   1.55   1.48   0.00   0.60   1.10   2.00   10.60
+stl     1328.0   0.62   0.41   0.00   0.30   0.50   0.80    2.50
+blk     1328.0   0.37   0.43   0.00   0.10   0.20   0.50    3.90
+tov     1328.0   1.19   0.72   0.10   0.70   1.00   1.50    4.40
+fg_pct  1328.0  44.24   6.23  22.22  40.00  44.02  47.90   75.86
+tp_pct  1328.0  16.77  17.41   0.00   0.00  16.67  33.33  100.00
+ft_pct  1328.0  70.67  11.22   0.00  64.29  71.43  77.78  100.00
+
+Linhas com feitos > tentados: 0
+
+Médias por classe:
+target      0      1
+gp      51.43  65.90
+min     14.23  19.72
+pts      5.04   7.88
+fgm      1.95   3.05
+fga      4.54   6.71
+tpm      0.23   0.26
+tpa      0.75   0.79
+ftm      0.92   1.53
+fta      1.32   2.13
+oreb     0.72   1.19
+dreb     1.53   2.33
+ast      1.22   1.76
+stl      0.50   0.69
+blk      0.25   0.44
+tov      0.94   1.35
+fg_pct  42.43  45.34
+tp_pct  17.55  16.29
+ft_pct  69.35  71.48
+
+Treino: (1062, 18), Teste: (266, 18) (estratificado, seed=42)
+
+[Regressão Logística] melhores parâmetros: {'clf__C': 0.01, 'clf__class_weight': 'balanced'}
+[Regressão Logística] F1-macro CV (treino): 0.6849
+
+[Árvore de Decisão] melhores parâmetros: {'clf__max_depth': 3, 'clf__min_samples_leaf': 20}
+[Árvore de Decisão] F1-macro CV (treino): 0.6673
+
+== AVALIAÇÃO NO CONJUNTO DE TESTE (limiar 0,5) ==
+
+--- Regressão Logística ---
+              precision    recall  f1-score   support
+
+     <5 anos       0.56      0.71      0.63       101
+    >=5 anos       0.79      0.65      0.72       165
+
+    accuracy                           0.68       266
+   macro avg       0.67      0.68      0.67       266
+weighted avg       0.70      0.68      0.68       266
+
+AUC-ROC: 0.7491
+
+--- Árvore de Decisão ---
+              precision    recall  f1-score   support
+
+     <5 anos       0.62      0.55      0.58       101
+    >=5 anos       0.74      0.79      0.76       165
+
+    accuracy                           0.70       266
+   macro avg       0.68      0.67      0.67       266
+weighted avg       0.69      0.70      0.70       266
+
+AUC-ROC: 0.7233
+
+Modelo escolhido para deploy (maior F1-macro na CV do treino): Regressão Logística
+
+Teste com limiar 0,50: acc=0.677 f1_macro=0.671
+Matriz de confusão [[TN FP],[FN TP]]: [[72, 29], [57, 108]]
+
+Teste com limiar ajustado 0.47: acc=0.692 f1_macro=0.680
+Matriz de confusão [[TN FP],[FN TP]]: [[67, 34], [48, 117]]
+
+Importância por permutação (top 8):
+gp        0.0541
+stl       0.0071
+tpa       0.0070
+blk       0.0059
+ft_pct    0.0054
+tpm       0.0046
+tov       0.0032
+oreb      0.0027
+
+Erros no teste: 82 de 266
+Médias dos erros vs acertos (gp, min, pts):
+          gp    min   pts
+ok                       
+False  56.06  14.03  5.31
+True   60.59  18.16  7.09
